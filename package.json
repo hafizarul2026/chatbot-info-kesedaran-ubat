@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start --hostname 0.0.0.0 --port 43147",
     "lint": "eslint",
-    "test:engine": "npx tsx src/lib/engine.test.ts"
+    "test:engine": "npx tsx src/lib/engine.test.ts",
+    "build:cf": "CLOUDFLARE=true next build",
+    "deploy": "CLOUDFLARE=true next build && wrangler deploy"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
@@ -28,6 +30,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.3.4",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "^4.130.0"
   }
 }
