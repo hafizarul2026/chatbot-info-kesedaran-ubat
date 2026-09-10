@@ -2,6 +2,14 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "chatbot-info-kesedaran-ubat",
   "compatibility_date": "2026-09-10",
+  "workers_dev": true,
+  "preview_urls": true,
+  "routes": [
+    {
+      "pattern": "cekmal.hafizarul.my",
+      "custom_domain": true
+    }
+  ],
   "assets": {
     "directory": "./out",
     "not_found_handling": "404-page"

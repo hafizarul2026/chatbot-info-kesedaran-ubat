@@ -6,12 +6,6 @@ Jawapan berasaskan bahan Cawangan Penguatkuasaan Farmasi (modul Sahabat Ubat / S
 
 Kandungan chatbot disusun daripada slaid SOBAT CPF Pahang yang berkaitan dan FAQ rasmi KKM.
 
-## Laman web
-
-[https://hafizarul2026.github.io/chatbot-info-kesedaran-ubat/](https://hafizarul2026.github.io/chatbot-info-kesedaran-ubat/)
-
-Jika laman belum muncul, buka repositori → **Actions** dan pastikan alur **Deploy GitHub Pages** berjaya. Kali pertama, pergi **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-
 ## Tambah sumber maklumat
 
 Boleh. Sumber baharu dimasukkan dalam `src/lib/extra-sources.ts` tanpa mengubah jawapan sedia ada:
@@ -21,6 +15,20 @@ Boleh. Sumber baharu dimasukkan dalam `src/lib/extra-sources.ts` tanpa mengubah 
 - `EXTRA_STARTER_QUESTIONS` — soalan cadangan di skrin mula
 
 Hantar slaid, FAQ, memo, atau nota rasmi kemudian. Ia akan ditukar kepada topik chatbot (tajuk, kata kunci, dan jawapan).
+
+## Laman web
+
+Laman rasmi: [https://cekmal.hafizarul.my](https://cekmal.hafizarul.my)
+
+Deploy ke Cloudflare Workers (laman statik pada domain `cekmal.hafizarul.my`):
+
+```bash
+npx wrangler login
+npm install
+npm run deploy
+```
+
+Kod sumber juga ada di GitHub: [https://github.com/hafizarul2026/chatbot-info-kesedaran-ubat](https://github.com/hafizarul2026/chatbot-info-kesedaran-ubat)
 
 ## Jalankan secara tempatan
 
@@ -53,3 +61,4 @@ Buka [http://localhost:43147](http://localhost:43147).
 - `npm run build` — binaan produksi
 - `npm run start` — pelayan produksi
 - `npm run test:engine` — ujian padanan soalan
+- `npm run deploy` — bina export statik dan hantar ke Cloudflare Workers
